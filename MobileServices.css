@@ -4,7 +4,15 @@
 }
  html {
  	background-color: rgb(204, 255, 204);
+ 	font-size: 16px;
+ 	overflow-x: hidden;
  }
+
+ body {
+	padding: 1%;
+
+ }
+
 
 @font-face {
 	font-family: "crayon";
@@ -14,24 +22,27 @@
 .grid {
 	margin-top: 200px;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns:1fr;
 	grid-gap: 10px;
 	grid-template-areas: 
-	"bookmobileCurrent bookmobileParagraph"
-	"historyParagraph oldBookmobile"
-	"map directions"
-	"footer footer"
+	"bookmobileCurrent"
+	"bookmobileParagraph"
+	"oldBookmobile"
+	"historyParagraph"
+	"map"
+	"directions"
+	"footer";
 }
-
+	
 .topContainer {
 	width: 100vw;
-	height: 175px;
+	height: 23%;
 	background-color: rgb(179, 255, 255);
 	font-family: "crayon";
-	font-size: 4em;
+	font-size: 5vw;
 	text-align: center;
-	position: fixed;
 	top: 0;
+	position: fixed;
 }
 
 .bookmobileCurrent img {
@@ -72,35 +83,32 @@
 	font-size: 4em;
 	grid-area: directions;
 	align-self: center;
+	text-align: center;
 	color: #002b80;
 }
 
 .footer{
 	grid-area: footer;
 	width: 100vw;
-	height: 40px;
+	height: 4rem;
 	background-color: rgb(179, 255, 255);
 	font-family: "crayon";
-	font-size: 2em;
+	font-size: 3rem;
 	text-align: center;
 	color: blue;
 }
 
+@media  only screen and  (min-width: 736px) {
+	.grid {
+	margin-top: 10rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+	grid-template-areas: 
+	"bookmobileCurrent bookmobileParagraph"
+	"historyParagraph oldBookmobile"
+	"map directions"
+	"footer footer"
+}
 
-
-
-
-
-	/*<div class="topContainer">
-			<h1>Bookmobile</h1>
-		</div>
-		<div class="bookmobileCurrent">
-			<img src="">
-		</div>
-		<div class="bookmobileParagraph"></div>
-		<div class="historyParagraph"></div>
-		<div class="oldBookmobile"></div>
-		<div class="tomorrowParagraph"></div>
-		<div class="map"></div>	
-	</div>
-*/
+}
